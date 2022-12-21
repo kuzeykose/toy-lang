@@ -56,6 +56,10 @@ export class Interpretter {
   }
 
   calculate(select) {
+    if (Object.keys(select).length === 0) {
+      return undefined
+    }
+
     if (select.type === 'number') {
       return select.value
     } else if (select.type === 'identifier') {

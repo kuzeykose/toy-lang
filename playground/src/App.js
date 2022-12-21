@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <title>TITLE </title>
       <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 12px' }}>
         <ChakraProvider>
           <Playground />

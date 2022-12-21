@@ -34,6 +34,7 @@ export class Interpretter {
   }
 
   assign() {
+    console.log(this.input_line.right)
     const identifier = this.input_line.left;
     const value = this.operator(this.input_line.right);
     const operator = this.input_line.operator;
@@ -56,6 +57,10 @@ export class Interpretter {
   }
 
   calculate(select) {
+    if (Object.keys(select).length === 0) {
+      return undefined
+    }
+
     if (select.type === 'number') {
       return select.value
     } else if (select.type === 'identifier') {

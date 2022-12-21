@@ -40,6 +40,9 @@ function Playground() {
     } catch (error) {
       console.log(error);
       setError(error.message)
+      setTokens()
+      setParseTree()
+      setInterpreter()
     }
   }
 
@@ -53,6 +56,9 @@ function Playground() {
     } catch (error) {
       console.log(error);
       setError(error.message)
+      setTokens()
+      setParseTree()
+      setInterpreter()
     }
   }
 
@@ -65,6 +71,9 @@ function Playground() {
     } catch (error) {
       console.log(error);
       setError(error.message) 
+      setTokens()
+      setParseTree()
+      setInterpreter()
     }
   }
 
@@ -122,6 +131,10 @@ function Playground() {
                           {interpreterResult}
                         </Box>
                       }
+                      {error && <Alert status='error'>
+                    <AlertIcon />
+                    <AlertTitle>Error</AlertTitle>
+                  </Alert>}
                     </TabPanel>
                     <TabPanel>
                       <Box overflowY='auto' h={425}>
@@ -134,6 +147,12 @@ function Playground() {
                             enableClipboard={false} 
                             src={tokens} 
                           />
+                        }
+                        {error &&
+                          <Alert status='error'>
+                            <AlertIcon />
+                            <AlertTitle>Error</AlertTitle>
+                          </Alert>
                         }
                       </Box>
                     </TabPanel>
@@ -149,13 +168,15 @@ function Playground() {
                             src={parseTree} 
                           />
                         }
+                        {error &&
+                           <Alert status='error'>
+                            <AlertIcon />
+                            <AlertTitle>Error</AlertTitle>
+                          </Alert>
+                        }
                       </Box>
                     </TabPanel>
                   </TabPanels>
-                  {error && <Alert status='error'>
-                    <AlertIcon />
-                    <AlertTitle>Error</AlertTitle>
-                  </Alert>}
                 </Tabs>
               </Box>
             </Flex>

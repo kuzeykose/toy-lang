@@ -3,9 +3,7 @@ import { Parser } from './parser.js';
 import { Interpretter } from './interpretter.js';
 
 const program = `
-  x = 1;
-  y = x;
-  z = (2+y);
+z = --2;
 `
 
 const tokenizer = new Tokenizer();
