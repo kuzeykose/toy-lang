@@ -4,12 +4,9 @@ import {
   Table,
   Center,
   Tbody,
-  Tfoot,
   Tr,
-  Th,
   Td,
-  TableCaption,
-  TableContainer, Box, Heading, Text, ChakraProvider, Divider, Code
+  Box, Heading, Text, ChakraProvider, Divider, Code
 } from '@chakra-ui/react'
 import Playground from './layout/Playground'
 

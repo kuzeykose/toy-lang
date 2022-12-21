@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import {   Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,Code, Button, Text, Heading, Flex, Textarea,  Box, Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
+import { Alert,AlertIcon,AlertTitle,Code, Button, Text, Heading, Flex, Textarea,  Box, Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
 import { Tokenizer } from '../toy-lang/tokenizer';
 import { Parser } from '../toy-lang/parser';
 import { Interpretter } from '../toy-lang/interpretter';
 import ReactJson from 'react-json-view'
+import GithubMark from '../icon/github-mark.png'
 
 function Playground() {
   const [value, setValue] = useState('x = 2+2;\ny = 12+x;\nt = x+y;');
@@ -95,9 +93,16 @@ function Playground() {
           <Box mt={20}>
             <Box textAlign='center'>
               <Heading>Toy Language</Heading>
+              <Flex alignItems='center' justifyContent='center'>
               <Text fontSize='xl'>
                 Simple interpreter example written in JavaScript.
               </Text>
+              <div style={{marginLeft:6}}>
+                <a href="https://github.com/kuzeykose/toy-lang" target="_blank">
+                <img src={GithubMark} alt="test" width={26}/>
+                </a>
+                </div>
+              </Flex>
             </Box>
 
             <Flex color='white' my={6}>
