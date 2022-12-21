@@ -125,7 +125,7 @@ function Playground() {
                   <TabList display='flex' justifyContent='center'>
                     <Tab>Result</Tab>
                     <Tab>Tokens</Tab>
-                    <Tab>Parse Three</Tab>
+                    <Tab>Parse Tree</Tab>
                   </TabList>
 
                   <TabPanels h={'100%'}>
